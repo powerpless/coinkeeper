@@ -22,7 +22,7 @@ const AddBudgetPage = () => {
               : theme.colors.gray[9],
         })}
       >
-        Set Your Income / Budget
+        Set Your Income
       </Text>
       <Text
         size="xs"
@@ -33,7 +33,7 @@ const AddBudgetPage = () => {
               : theme.colors.gray[9],
         })}
       >
-        Sets your income / budget to the entered value.
+        Sets your income
       </Text>
       <SetBudget />
       <Divider mt={30} mb={20} />
@@ -58,7 +58,7 @@ const AddBudgetPage = () => {
               : theme.colors.gray[9],
         })}
       >
-        Adds on to your current income / budget amount.
+        Adds on to your current income
       </Text>
       <AddToBudget />
       <Divider mt={30} mb={20} />

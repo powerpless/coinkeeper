@@ -58,7 +58,7 @@ const AddToBudget = () => {
           }
         }}
       >
-        Add To Budget
+        Add To Income
       </Button>
     </div>
   );

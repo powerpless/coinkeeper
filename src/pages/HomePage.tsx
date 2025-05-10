@@ -25,10 +25,10 @@ const HomePage = () => {
               : theme.colors.gray[9],
         })}
       >
-        YOUR BALANCE IS: ${budget - expenses}
+        YOUR BALANCE IS: {budget - expenses} tg
       </Text>
       <SimpleGrid cols={2} style={{ justifyContent: "center" }}>
-        <DisplayCard label="Income / Budget" amount={budget} color="green.4" />
+        <DisplayCard label="Income" amount={budget} color="green.4" />
         <DisplayCard label="Expenses" amount={expenses} color="red.4" />
         <HistoryStack />
         {/* Only show the pie chart when either expenses or budget is greater than 0 */}

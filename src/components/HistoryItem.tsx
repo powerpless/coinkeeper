@@ -55,8 +55,8 @@ const HistoryItem = ({
         </Text>
         <Text size={15} color={color} weight={500}>
           {/* Display the correct sign based on the type of transaction */}
-          {type === "Budget" || type === "Expenses Reset" ? "+" : "-"}$
-          {amount.toLocaleString("en-US")}
+          {type === "Budget" || type === "Expenses Reset" ? "+" : "-"} 
+          {amount.toLocaleString("en-US")} tg
         </Text>
       </Card>
     </>

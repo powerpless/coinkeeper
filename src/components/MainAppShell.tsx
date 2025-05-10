@@ -82,7 +82,7 @@ const MainAppShell = () => {
                   link="/newExpense"
                 />
                 <NavigationLink
-                  label="Add / Update Your Budget"
+                  label="Add an Income"
                   icon={<MdAttachMoney />}
                   link="/newBudget"
                 />
@@ -130,7 +130,7 @@ const MainAppShell = () => {
                     }}
                   >
                     <CgCalculator />
-                    <Text ml={10}>Expense Tracker App</Text>
+                    <Text ml={10}>Coinkeeper</Text>
                   </div>
                   <DarkLightThemeButton />
                 </div>
