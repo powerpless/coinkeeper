@@ -1,30 +1,27 @@
-import { Paper } from "@mantine/core";
-import { MantineProvider } from "@mantine/core";
-import MainAppShell from "./components/MainAppShell";
-import { AvailableCategoriesContextProvider } from "./store/AvailableCategoriesContext";
-import { CategoriesContextProvider } from "./store/CategoriesContext";
-import { HistoryContextProvider } from "./store/HistoryContext";
+// src/App.tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
+import PrivateRoute from './components/Auth/PrivateRoute';
+import Dashboard from './components/MainAppShell';
 
-export default function App() {
+function App() {
   return (
-    // Global styles
-    <MantineProvider
-      theme={{
-        fontFamily: "open-sans",
-        colorScheme: "dark",
-        fontSizes: { md: 90 },
-      }}
-    >
-      <Paper>
-        {/* Contexts */}
-        <AvailableCategoriesContextProvider>
-          <HistoryContextProvider>
-            <CategoriesContextProvider>
-              <MainAppShell />
-            </CategoriesContextProvider>
-          </HistoryContextProvider>
-        </AvailableCategoriesContextProvider>
-      </Paper>
-    </MantineProvider>
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route
+          path="/*"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
